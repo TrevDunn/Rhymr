@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 gem 'rhymes'
 gem 'syllabize'
+gem 'numbers_and_words'
 gem 'pry-rails'
 gem 'bcrypt'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
