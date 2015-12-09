@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 
 	# Basic Routes
 	resources :users do
+		resources :limericks
 		resources :comments
 	end
 
