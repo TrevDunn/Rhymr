@@ -1,0 +1,11 @@
+<ul>
+  <% @limericks.each do |user| %>
+  <li>
+    <%= link_to "ID: #{user.id}", user_path(user) %>
+    <%= link_to 'edit', edit_user_path(user) %>
+    Name: <%= user.name %>
+    Email: <%= user.email %>
+
+  </li>
+  <% end %>
+</ul>

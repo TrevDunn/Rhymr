@@ -6,6 +6,7 @@ class UsersController < ApplicationController
 	# Routes
 	def index
 		@users = User.all
+		@limericks = 
 	end
 	def show
 		@user = User.find(params[:id])
@@ -44,7 +45,7 @@ class UsersController < ApplicationController
 	def user_params
 		params.require(:user).permit(
 		:name,
-		:email
+		:email,
 		:password,
 		:password_confirmation
 		)

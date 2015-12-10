@@ -1,0 +1,16 @@
+<!-- <% if current_user.id == @user.id %> -->
+
+<div class="main-section">
+	<ul class="user-limerick-list">
+		<% @user.each do |user| %>
+		<li class="user-section">
+			<%  %>
+			<div class="username-section">
+				<%= @user.name %>
+			</div>
+			<div class="latest-limerick">
+			</div>
+		</li>
+		<% end %>
+	</ul>
+</div>
