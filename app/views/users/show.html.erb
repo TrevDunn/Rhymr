@@ -9,3 +9,14 @@
 		</div>
 	</div>
 </div>
+
+<div class="main-list">
+	<div class="headshot-links" id="user-box">
+		<strong> User Name: </strong>
+		<%= @user.name %>
+		<br/>
+		<strong>Email:</strong>
+		<%= @user.email %> <br/>
+		<%= link_to 'Edit Profile', edit_user_path(@user) %>
+	</div>
+</div>

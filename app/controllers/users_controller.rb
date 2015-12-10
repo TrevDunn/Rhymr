@@ -6,7 +6,8 @@ class UsersController < ApplicationController
 	# Routes
 	def index
 		@users = User.all
-		@limericks = 
+		# @limericks = @users.limericks
+		puts @users
 	end
 	def show
 		@user = User.find(params[:id])

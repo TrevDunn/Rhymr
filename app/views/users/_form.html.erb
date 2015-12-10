@@ -1,0 +1,18 @@
+<%= form_for(@user) do |f| %>
+	<div class="login-div">
+	<ul>
+		<li>
+			Name: <%= f.text_field :name %>
+		</li>
+		<li>
+			Email: <%= f.text_field :email %>
+		</li>
+		<li>
+			Password: <%= f.password_field :password %>
+			<br/>
+			Password Confirmation: <%= f.password_field :password_confirmation %>
+		</li>
+	</ul>
+	<%= submit_tag "Submit" %>
+	</div>
+<% end %>

@@ -1,7 +1,11 @@
 class LimericksController < ApplicationController
 
-	def index
+	def all
 		@limericks = Limerick.all
+	end
+	def index
+		@user = User.find(params[:id])
+		@limericks = @user.limericks
 	end
 	def new
 		@limerick = Limerick.new

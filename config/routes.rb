@@ -1,10 +1,16 @@
 Rails.application.routes.draw do
 
+	root to: 'users#index'
+
 	# Basic Routes
 	resources :users do
-		resources :limericks
-		resources :comments
+		resources :limericks do
+			resources :comments
+		end
 	end
+
+	# Show only the newest Limericks
+	get '/limericks' => 'limericks#all'
 
 	# Sessions
 	get '/login' => 'sessions#new'

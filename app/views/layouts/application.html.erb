@@ -7,8 +7,20 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+	<header>
+		<div class="head-box">
+			<% if current_user %>
+				Signed in as <%= current_user.name %>
+				<br/>
+				<%= link_to "My Profile", user_path(current_user.id) %> | <%= link_to 'logout', logout_path %>
+			<% else %>
+				<%= link_to 'login', login_path %> || <%= link_to 'signup', new_user_path %>
+			<% end %>
+		</div>
+	</header>
 	<h2>Rhymr</h2>
 	<h4>Your Resource for Limericks</h4>
+
 	<%= yield %>
 
 </body>

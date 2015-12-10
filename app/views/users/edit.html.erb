@@ -1,0 +1,15 @@
+
+<% if current_user.id == @user.id %>
+<div class="main-section">
+	<div class="main-heading">
+		<h2> Edit Your Account </h2>
+	</div>
+	<%= render 'form' %>
+<div class="destroy-text">
+<%= link_to 'Delete Account', user_path,
+method: :delete,
+data: {confirm: 'Are you sure?!?!'} %>
+</div>
+<% else %>
+	<%= render 'deny'%>
+<% end %>
