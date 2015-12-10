@@ -11,6 +11,7 @@ Rails.application.routes.draw do
 
 	# Show only the newest Limericks
 	get '/limericks' => 'limericks#all'
+	post '/limericks' => 'limericks#create'
 
 	# Sessions
 	get '/login' => 'sessions#new'

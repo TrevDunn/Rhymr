@@ -4,7 +4,7 @@ class LimericksController < ApplicationController
 		@limericks = Limerick.all
 	end
 	def index
-		@user = User.find(params[:id])
+		@user = User.find(params[:user_id])
 		@limericks = @user.limericks
 	end
 	def new
@@ -15,11 +15,12 @@ class LimericksController < ApplicationController
 	end
 	def create
 		@limerick = Limerick.new
-			# look at use later
+		@limerick.title = params[:limerick][:title]
 		@limerick.content = params[:limerick][:content]
+		@limerick.user_id = current_user.id
 		@limerick.save
 
-		redirect_to user_limericks_path
+		redirect_to limericks_path
 	end
 	def update
 		limerick = Limerick.find(params[:limerick_id])

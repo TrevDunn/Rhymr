@@ -1,0 +1,8 @@
+<%= form_for @limerick do |f| %>
+	<%= f.label :title %>
+	<%= f.text_field :title %>
+
+	<%= f.label :content %>
+	<%= f.text_area :content, size: "60X12" %>
+<%= f.submit "Submit" %>
+<% end %>
