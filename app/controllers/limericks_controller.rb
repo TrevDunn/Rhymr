@@ -2,6 +2,8 @@ class LimericksController < ApplicationController
 
 	def all
 		@limericks = Limerick.all
+		# @user_name = User.where(:user_id => @limericks.id)
+
 	end
 	def index
 		@user = User.find(params[:user_id])
