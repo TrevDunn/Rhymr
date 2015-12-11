@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-	root to: 'users#index'
+	root to: 'limericks#all'
 
 	# Basic Routes
 	resources :users do
