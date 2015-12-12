@@ -1,5 +1,5 @@
 <ul class="limerick-list">
-  <li class="limerick-li">
+  <li class="limerick-card">
 	  <div class="limerick-card">
 		  <h2>
 			  <%= link_to @limerick.user.name, user_limericks_path(@limerick.user.id) %>
@@ -12,4 +12,18 @@
 		  </div>
 	  </div>
   </li>
+</ul>
+
+		<div class="limerick-card">
+			<h4>
+				<%= @limerick.title, user_limerick_path(limerick.user.id, limerick.id) %> </h4> by <h4> <%= link_to @limerick.user.name, user_limericks_path(@limerick.user.id) %>
+			</h4>
+			<h2>
+			</h2>
+		    <div class="limerick-content">
+				<%= limerick.content %>
+			</div>
+		</div>
+	</li>
+	<% end %>
 </ul>

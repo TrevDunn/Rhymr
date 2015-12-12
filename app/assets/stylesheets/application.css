@@ -85,18 +85,35 @@ ul.limerick-list {
 	padding: 0;
 	text-align: center;
 	border: 2px solid darkgrey;
+	max-width: 25%;
+	background: white;
 }
 
 div.limerick-card{
 	overflow: hidden;
+	text-align: left;
+	border-bottom: 2px solid darkgrey;
+}
+.limerick-card h4 {
+	margin: 2px;
+	max-width: 20%;
+	display: inline-block;
+
 
 }
 
 div.limerick-content {
-	text-align: left;
-	border: 2px solid grey;
+	text-align: center;
+	/*border: 2px solid grey;*/
+	position: relative;
+	max-width: 70%;
+	margin: 0 auto;
+	margin-bottom: 10px;
 }
 
+form.new_limerick {
+	max-width: 25%;
+}
 
 
 
