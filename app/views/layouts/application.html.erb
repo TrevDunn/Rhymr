@@ -12,20 +12,20 @@
 				<% if current_user %>
 					Signed in as <%= current_user.name %>
 					<br/>
-					<%= link_to "My Profile", user_path(current_user.id) %> | <%= link_to 'logout', logout_path %>
+					<%= link_to "PROFILE", user_path(current_user.id) %> | <%= link_to 'LOGOUT', logout_path %>
 				<% else %>
-					<%= link_to 'login', login_path %> || <%= link_to 'signup', new_user_path %>
+					<%= link_to 'LOGIN', login_path %> || <%= link_to 'SIGNUP', new_user_path %>
 				<% end %>
 			</div>
 			<% if current_user %>
 			<div class="new-limerick">
-				<%= link_to "Submit a New Limerick", new_user_limerick_path(current_user.id) %>
+				<%= link_to "New Limerick", new_user_limerick_path(current_user.id) %>
 				<% else %>
 			</div>
 			<% end %>
 		</header>
-		<h2><%=link_to 'Rhymr', limericks_path %></h2>
-		<h4>Your Resource for Limericks</h4>
+		<h2 class="site-title"><%=link_to 'Rhymr', limericks_path %></h2>
+		<h4 class="site-tagline">Your Resource for Limericks</h4>
 
 		<%= yield %>
 

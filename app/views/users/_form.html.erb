@@ -1,6 +1,6 @@
 <%= form_for(@user) do |f| %>
-	<div class="login-div">
-	<ul>
+	<div class="login">
+	<ul class="login">
 		<li>
 			Name: <%= f.text_field :name %>
 		</li>
@@ -9,10 +9,13 @@
 		</li>
 		<li>
 			Password: <%= f.password_field :password %>
-			<br/>
+		</li>
+		<li>
 			Password Confirmation: <%= f.password_field :password_confirmation %>
 		</li>
 	</ul>
-	<%= submit_tag "Submit" %>
+		<div class="submit-button">
+			<%= submit_tag "Submit" %>
+		</div>
 	</div>
 <% end %>

@@ -3,8 +3,8 @@
 		<h1> Log In </h1>
 	</div>
 	<%= form_tag '/login' do %>
-		<div class="login-div">
-		<ul>
+		<div class="login">
+		<ul class="login">
 			<li>
 				Email: <%= text_field_tag :email%>
 			</li>
@@ -12,7 +12,9 @@
 				Password: <%= password_field_tag :password  %>
 			</li>
 		</ul>
-		<%= submit_tag "Submit" %>
+		<div class="submit-button">
+			<%= submit_tag "Submit" %>
 		</div>
+	</div>
 	<% end %>
 </div>

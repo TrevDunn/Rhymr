@@ -1,14 +1,16 @@
 <ul class="limerick-list">
   <% @limericks.each do |limerick| %>
-  <li class="limerick-card">
-	  <h2>
-		  <%= limerick.user.name %>
-	  </h2>
-    <div>
-		<h3>
-			<%= link_to limerick.title, user_limerick_path(limerick.user.id, limerick.id) %>
-		</h3>
-		<%= limerick.content %>
+  <li class="limerick-li">
+	  <div class="limerick-card">
+		  <h2>
+			  <%= limerick.user.name %>
+		  </h2>
+	    <div>
+			<h3>
+				<%= link_to limerick.title, user_limerick_path(limerick.user.id, limerick.id) %>
+			</h3>
+			<%= limerick.content %>
+		</div>
 	</div>
   </li>
   <% end %>
